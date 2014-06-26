@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    android:background="@drawable/tmp_mainbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/app_title_bar" >
+
+        <ImageButton
+            android:id="@+id/btnWeatherBack"
+            android:layout_width="38dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/navigation_back" />
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/btnWeatherBack"
+            android:layout_marginLeft="10dip"
+            android:text="天气"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/wea_refresh"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:src="@drawable/refresh"
+            />
+        
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/wea_refresh"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" >
+        </TextView>
+        
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/wea_refresh"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+        
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/city"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+        
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btnWeatherBack"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/content"
+            layout="@layout/content_layout" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="hello" />
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/newNotePopMenu"
+          android:title="记事"
+          android:icon="@drawable/note"/>
+    <item android:id="@+id/newTaskPopMenu"
+		  android:title="活动"
+		  android:icon="@drawable/activity" 
+		  />      
+    <item android:id="@+id/help"
+          android:title="Help" />
+</menu>

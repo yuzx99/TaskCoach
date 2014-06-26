@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/app_title_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnBackLocAdd"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/navigation_back" />
+
+        <ImageView
+            android:id="@+id/titleBarLine"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btnBackLocAdd"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/titleBarLine"
+            android:gravity="center_vertical"
+            android:text="添加位置"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/addLocName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location Name"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/addLocLong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Loc Longtitude"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/addLocLati"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Loc latitude"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <ImageButton
+                android:id="@+id/btnLocate" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/location_place"/>
+            
+            <ImageButton
+                android:id="@+id/btnAddLoc" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/loc_add"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical"
+    >
+
+    <CheckBox
+        android:id="@+id/taskcb"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical" />
+
+    <LinearLayout
+        android:id="@+id/llTaskDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/taskItemDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            android:text="2013-5-12"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:id="@+id/taskItemTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            android:text="10:10"
+            android:gravity="right|center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/taskItemContent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/taskcb"
+        android:layout_toLeftOf="@id/llTaskDateTime"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="task"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

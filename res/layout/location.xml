@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/app_title_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnBackLocation"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/navigation_back" />
+
+        <ImageView
+            android:id="@+id/titleBarLine"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btnBackLocation"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/titleBarLine"
+            android:gravity="center_vertical"
+            android:text="位置管理"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btnNewLoc"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/content_new" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btnNewLoc"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <ListView
+            android:id="@+id/locationList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/divider_list" >
+        </ListView>
+    </LinearLayout>
+    <!--
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_first_normal"
+                >
+                <TextView 
+                    android:id="@+id/allLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="查看所有位置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:drawableRight="@drawable/right"/>
+            </LinearLayout>
+            
+            <LinearLayout                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_middle_normal"                
+                >
+                <TextView       
+                    android:id="@+id/addLocation"              
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="添加新位置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:drawableRight="@drawable/right"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_last_normal"
+                >
+                <TextView 
+                    android:id="@+id/deleteLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="删除已有位置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:drawableRight="@drawable/right"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_item_single_normal"
+                 >
+                <TextView
+                    android:id="@+id/openGPS"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="打开GPS"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:drawableRight="@drawable/right"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    -->
+
+</LinearLayout>

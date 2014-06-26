@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/app_title_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnBackNoteFrag"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/navigation_back" />
+
+        <ImageView
+            android:id="@+id/titleBarLine"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btnBackNoteFrag"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/titleBarLine"
+            android:gravity="center_vertical"
+            android:text="@string/note_title"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btnNewNoteFrag"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/content_new" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btnNewNoteFrag"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:id="@+id/noteList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:dividerHeight="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"/>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/app_title_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnBackSchDet"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/navigation_back" />
+
+        <ImageView
+            android:id="@+id/titleBarLineSchDet"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btnBackSchDet"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/titleBarLineSchDet"
+            android:gravity="center_vertical"
+            android:text="活动日程"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btnShareSchDet"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/share" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btnShareSchDet"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+    </RelativeLayout>
+
+    <com.yuzx.taskcoach.view.BorderTextView
+        android:id="@+id/btvContentSchDet"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"
+        android:padding="5dp"
+        android:gravity="top" />
+	<TextView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="时间"
+	    android:textSize="15sp"
+	    android:textColor="#808080"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="5dp"
+	    />
+	
+    <com.yuzx.taskcoach.view.BorderTextView
+        android:id="@+id/btvDateTimeSchDet"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical" 
+        android:textSize="17sp"
+        android:paddingLeft="5dp"/>
+
+    <TextView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="提醒"
+	    android:textSize="15sp"
+	    android:textColor="#808080"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="5dp"
+	    />
+    <com.yuzx.taskcoach.view.BorderTextView
+        android:id="@+id/btvRemindSchDet"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical" 
+        android:text="无提醒"
+        android:textSize="17sp"
+        android:paddingLeft="5dp" />
+	<TextView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="位置"
+	    android:textSize="15sp"
+	    android:textColor="#808080"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="5dp"
+	    />
+    <com.yuzx.taskcoach.view.BorderTextView
+        android:id="@+id/btvLocSchDet"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="无位置信息" 
+        android:textSize="17sp"
+        android:paddingLeft="5dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp" 
+        android:orientation="horizontal">
+
+        <com.yuzx.taskcoach.view.BorderTextView
+            android:id="@+id/btvEditSchDet"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="编辑"
+            android:gravity="center" 
+            android:background="@drawable/selector_button_bg"
+            />
+        
+        <com.yuzx.taskcoach.view.BorderTextView
+            android:id="@+id/btvDelSchDet"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="删除"
+            android:gravity="center" 
+            android:background="@drawable/selector_button_bg"
+            />
+    </LinearLayout>
+
+</LinearLayout>

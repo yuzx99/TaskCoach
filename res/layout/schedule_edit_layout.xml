@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/app_title_bar"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/btnSaveSchedule"
+                    android:layout_width="48dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/btn_setting_desc"
+                    android:src="@drawable/navigation_accept" />
+
+                <ImageView
+                    android:id="@+id/btnSaveScheduleBarLine"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/btnSaveSchedule"
+                    android:background="@drawable/app_title_bar_line"
+                    android:contentDescription="@string/app_title_bar_desc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_toRightOf="@id/btnSaveScheduleBarLine"
+                    android:gravity="center_vertical"
+                    android:text="@string/schedule_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+                <ImageButton
+                    android:id="@+id/btnCancelSchedule"
+                    android:layout_width="48dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/btn_setting_desc"
+                    android:src="@drawable/navigation_cancel" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/btnCancelSchedule"
+                    android:background="@drawable/app_title_bar_line"
+                    android:contentDescription="@string/app_title_bar_desc" />
+            </RelativeLayout>
+
+            <com.yuzx.taskcoach.view.BorderEditText
+                android:id="@+id/betScheduleContent"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="top"
+                android:hint="请输入提醒内容" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类型:"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spSetType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/setType_labels"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提醒:"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spSetAlarm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/setAlarm_labels"
+                    android:gravity="center" />
+               
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="从"
+                android:textColor="#808080"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.yuzx.taskcoach.view.BorderTextView
+                    android:id="@+id/btvScheduleDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/next_year"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="17sp" />
+
+                <com.yuzx.taskcoach.view.BorderTextView
+                    android:id="@+id/btvScheduleTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:layout_weight="2"
+                    android:drawableRight="@drawable/next_year"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="到"
+                android:textColor="#808080"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.yuzx.taskcoach.view.BorderTextView
+                    android:id="@+id/btvScheduleEndDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/next_year"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="17sp" />
+
+                <com.yuzx.taskcoach.view.BorderTextView
+                    android:id="@+id/btvScheduleEndTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:layout_weight="2"
+                    android:drawableRight="@drawable/next_year"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="位置:"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <com.yuzx.taskcoach.view.BorderEditText
+                    android:id="@+id/betScheduleLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="5dip" >
+				
+                <CheckedTextView
+                    android:id="@+id/ctvLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/cb_drw"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="位置提醒"
+                    android:textColor="#ff000000"
+                    android:textSize="20dp" />                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

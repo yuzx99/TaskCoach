@@ -1,0 +1,65 @@
+<resources>
+
+    <string name="app_name">TaskCoach</string>
+    <string name="btn_setting_desc">Setting</string>
+    <string name="app_title_bar_desc">Title Bar</string>
+    <string name="note_title">Notes-All</string>
+    <string name="schedule_title">活动日程</string>
+	<string name="test_text">This is testing string</string>
+	<string name="test_btn">TestBtn</string>
+	<string-array name="setAlarm_labels">
+	    <item>不提醒</item>
+	    <item>正点提醒</item>
+	    <item>提前5分钟</item>
+	    <item>提前10分钟</item>
+	    <item>提前30分钟</item>
+	    <item>提前1小时</item>
+	    <item>提前1天</item>
+	    <item>提前3天</item>
+	</string-array>
+	<string-array name="setType_labels">
+	    <item>任务</item>
+	    <item>会议</item>
+	    <item>约会</item>
+	    <item>电话</item>
+	    <item>生日</item>
+	    <item>其他</item>
+	</string-array>
+	
+	<string-array name="map_array">
+	    <item>添加到地址簿</item>
+	    <item>添加事件</item>
+	</string-array>
+	
+	<string name="not_yet_authorized">尚未授权</string>
+	<string name="sinaweibo">新浪微博</string>
+	<string name="tencentweibo">腾讯微博</string>
+	<string name="facebook">Facebook</string>
+	<string name="twitter">Twitter</string>
+	<string name="renren">人人网</string>
+	<string name="qzone">QQ空间</string>
+	<string name="douban">豆瓣</string>
+	<string name="evernote">印象笔记</string>
+	<string name="neteasemicroblog">网易微博</string>
+	<string name="wechat">微信好友</string>
+	<string name="wechatmoments">微信朋友圈</string>
+	
+	<string name="cancel">取消</string>
+	<string name="share_content">ShareSDK for Android不仅集成简单、支持如QQ好友、微信、新浪微博、腾讯微博等所有社交平台，而且还有强大的统计分析管理后台，实时了解用户、信息流、回流率、传播效应等数据，详情见官网http://sharesdk.cn @ShareSDK</string>
+	<string name="share_content_short">ShareSDK不仅集成简单、支持如微信、新浪微博、腾讯微博等社交平台，而且还有强大的统计分析管理后台，实时了解用户、信息流、回流率、传播效应等数据，详情见官网http://sharesdk.cn @ShareSDK</string>
+	<string name="evenote_title">这是一个神奇的SDK</string>
+	<string name="sharing">分享操作正在后台进行...</string>
+	<string name="share_to">分享到</string>
+	
+	<string name="share">分享</string>
+	<string name="multi_share">图文分享</string>
+	
+	<string name="update">文字分享</string>
+	<string name="image_upload">图片分享</string>
+	<string name="music_upload">音乐分享</string>
+	<string name="video_upload">视频分享</string>
+	<string name="webpage_upload">网页分享</string>
+	<string name="app_upload">应用分享</string>
+	<string name="share_to_moment">分享到朋友圈</string>
+	<string name="wechat_demo_title">微信分享Demo标题</string>
+</resources>

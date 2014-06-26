@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myTabHost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/app_title_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnBackTaskBoardFrag"
+                android:layout_width="48dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/btn_setting_desc"
+                android:src="@drawable/navigation_back" />
+
+            <ImageView
+                android:id="@+id/titleBarLine"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/btnBackTaskBoardFrag"
+                android:background="@drawable/app_title_bar_line"
+                android:contentDescription="@string/app_title_bar_desc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/titleBarLine"
+                android:gravity="center_vertical"
+                android:text="Task Board"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/btnNewNoteFrag"
+                android:layout_width="48dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/btn_setting_desc"
+                android:src="@drawable/content_new" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btnNewNoteFrag"
+                android:background="@drawable/app_title_bar_line"
+                android:contentDescription="@string/app_title_bar_desc" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/lltab1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/lltaskList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <ScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:id="@+id/lltaskpostpone"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:text="延期"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="#4169E1" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#4169E1" />
+
+                                    <ListView
+                                        android:id="@+id/taskPostponedList"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:divider="@drawable/divider_list" >
+                                    </ListView>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lltasktoday"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:text="今天"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="#4169E1" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#4169E1" />
+
+                                    <ListView
+                                        android:id="@+id/taskList"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:divider="@drawable/divider_list" >
+                                    </ListView>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lltasknextdays"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:text="接下来七天"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="#4169E1" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#4169E1" />
+
+                                    <ListView
+                                        android:id="@+id/taskNextDaysList"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:divider="@drawable/divider_list" >
+                                    </ListView>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lltaskdone"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:text="完成"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="#4169E1" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#4169E1" />
+
+                                    <ListView
+                                        android:id="@+id/taskDoneList"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:divider="@drawable/divider_list" >
+                                    </ListView>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lltaskDetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="visible" >
+						
+                        <!--  
+                        <include layout=""/>
+                        -->
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Test" >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tbtv2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Second Tab" />
+
+                <TextView
+                    android:id="@+id/tbtv3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Third Tab" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>

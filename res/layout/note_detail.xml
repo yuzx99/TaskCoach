@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/app_title_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnBackNoteDet"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/navigation_back" />
+
+        <ImageView
+            android:id="@+id/titleBarLineNoteDet"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btnBackNoteDet"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/titleBarLineNoteDet"
+            android:gravity="center_vertical"
+            android:text="查看记事"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btnMoreOpsNoteDet"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/share" />
+
+        <ImageView
+            android:id="@+id/titleBarLineNoteDet2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btnMoreOpsNoteDet"
+            android:background="@drawable/app_title_bar_line"
+            android:contentDescription="@string/app_title_bar_desc" />
+
+        <ImageButton
+            android:id="@+id/btnEditNoteDet"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/titleBarLineNoteDet2"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_setting_desc"
+            android:src="@drawable/content_edit" />
+    </RelativeLayout>
+
+    <com.yuzx.taskcoach.view.BorderTextView
+        android:id="@+id/btvNoteDetTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:text="Title"
+        android:textSize="20sp" />
+
+    <com.yuzx.taskcoach.view.BorderTextView
+        android:id="@+id/btvNoteDetContent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:gravity="top"
+        android:padding="5dp"
+        android:text="Content"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:id="@+id/llEdtDel"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <com.yuzx.taskcoach.view.BorderTextView
+            android:id="@+id/btvEditSchDet"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_bg"
+            android:gravity="center"
+            android:text="编辑" />
+
+        <com.yuzx.taskcoach.view.BorderTextView
+            android:id="@+id/btvDelSchDet"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_bg"
+            android:gravity="center"
+            android:text="删除" />
+    </LinearLayout>
+
+</LinearLayout>
